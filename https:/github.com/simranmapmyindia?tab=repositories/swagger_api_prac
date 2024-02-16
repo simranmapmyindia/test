@@ -12,20 +12,25 @@
     "url" : "http://0.0.0.0:5016/signboard"
   } ],
   "paths" : {
-    "/Auth/Bearer Token/{Token}" : {
+    "/auth/Bearer Token/{Token}" : {
       "post" : {
-        "summary" : "Returns a json response of output",
+        "summary" : "Returns a sucessfull completion status/unsucesfull status with error message",
         "parameters" : [ {
           "name" : "Token",
           "in" : "path",
-          "description" : "The authentication token for acsess",
+          "description" : "The Token of the user/client for acsess",
           "required" : true,
           "style" : "simple",
           "explode" : false,
           "schema" : {
             "type" : "string"
           }
-        } ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
       }
     }
   },
