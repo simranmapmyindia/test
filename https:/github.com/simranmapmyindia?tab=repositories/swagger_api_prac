@@ -12,7 +12,7 @@
     "url" : "http://0.0.0.0:5016/signboard"
   } ],
   "paths" : {
-    "/authentication/Bearer Token/{token}" : {
+    "/users/{userId}" : {
       "get" : {
         "summary" : "Returns a user by ID",
         "responses" : {
