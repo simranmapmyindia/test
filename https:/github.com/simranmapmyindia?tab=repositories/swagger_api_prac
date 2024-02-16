@@ -18,7 +18,7 @@
         "parameters" : [ {
           "name" : "Token",
           "in" : "path",
-          "description" : "The Token of the user/client for acsess",
+          "description" : "The Token of the user/client to access the api",
           "required" : true,
           "style" : "simple",
           "explode" : false,
@@ -28,11 +28,32 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "OK"
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/inline_response_200"
+                }
+              }
+            }
           }
         }
       }
     }
   },
-  "components" : { }
+  "components" : {
+    "schemas" : {
+      "inline_response_200" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "name" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
 }
