@@ -12,14 +12,20 @@
     "url" : "http://0.0.0.0:5016/signboard"
   } ],
   "paths" : {
-    "/users/{userId}" : {
-      "get" : {
-        "summary" : "Returns a user by ID",
-        "responses" : {
-          "200" : {
-            "description" : "OK"
+    "/Auth/Bearer Token/{Token}" : {
+      "post" : {
+        "summary" : "Returns a json response of output",
+        "parameters" : [ {
+          "name" : "Token",
+          "in" : "path",
+          "description" : "The authentication token for acsess",
+          "required" : true,
+          "style" : "simple",
+          "explode" : false,
+          "schema" : {
+            "type" : "string"
           }
-        }
+        } ]
       }
     }
   },
