@@ -46,7 +46,10 @@
       "inline_response_200" : {
         "type" : "object",
         "properties" : {
-          "code" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "name" : {
             "type" : "string"
           }
         }
