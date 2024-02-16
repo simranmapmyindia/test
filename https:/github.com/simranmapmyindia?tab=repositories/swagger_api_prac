@@ -1,0 +1,27 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Sign Board Api",
+    "description" : "listing of input and outputs",
+    "version" : "2.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/simran_mapmyindia.com/Signboard_detection/2.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "http://0.0.0.0:5016/signboard"
+  } ],
+  "paths" : {
+    "/authentication/Bearer Token/{token}" : {
+      "get" : {
+        "summary" : "Returns a user by ID",
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    }
+  },
+  "components" : { }
+}
